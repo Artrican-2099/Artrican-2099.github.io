@@ -1,0 +1,37 @@
+import libpff
+
+def get_senders_from_pst(pst_file_path):
+    # Open the PST file
+    pst_file = libpff.file()
+    pst_file.open(pst_file_path)
+
+    # Get the root folder
+    root_folder = pst_file.get_root_folder()
+
+    # List to store senders
+    senders = []
+
+    # Recursively extract senders from folders
+    def extract_senders(folder):
+        for item in folder.sub_items:
+            if item.is_message():
+                message = item.get_message()
+                sender = message.sender_name
+                senders.append(sender)
+            elif item.is_sub_folder():
+                extract_senders(item)
+
+    # Start extracting senders from the root folder
+    extract_senders(root_folder)
+
+    # Close the PST file
+    pst_file.close()
+
+    return senders
+
+# Example usage
+pst_file_path = 'path/to/your/file.pst'  # Replace with the path to your PST file
+senders = get_senders_from_pst(pst_file_path)
+print("Senders of emails in the PST file:")
+for sender in senders:
+    print(sender)

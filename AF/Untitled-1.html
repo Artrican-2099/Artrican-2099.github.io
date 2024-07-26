@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        .main-image {
+            width: 100%;
+            height: auto;
+        }
+        .thumbnail {
+            width: 20%;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-page">
+        <img id="mainImage" class="main-image" src="image1.jpg" alt="Main Image">
+        <div class="thumbnails">
+            <img class="thumbnail" src="image2.jpg" alt="Thumbnail 1" onclick="updateMainImage('image2.jpg')">
+            <img class="thumbnail" src="image3.jpg" alt="Thumbnail 2" onclick="updateMainImage('image3.jpg')">
+            <img class="thumbnail" src="image4.jpg" alt="Thumbnail 3" onclick="updateMainImage('image4.jpg')">
+            <img class="thumbnail" src="image5.jpg" alt="Thumbnail 4" onclick="updateMainImage('image5.jpg')">
+        </div>
+    </div>
+    <script>
+        function updateMainImage(imageSrc) {
+            document.getElementById('mainImage').src = imageSrc;
+            updateThumbnails(imageSrc);
+        }
+
+        function updateThumbnails(excludeImage) {
+            const allImages = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg'];
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            // Remove the main image from the list of thumbnails
+            const images = allImages.filter(image => image !== excludeImage);
+
+            // Shuffle the images array
+            for (let i = images.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [images[i], images[j]] = [images[j], images[i]];
+            }
+
+            // Update the thumbnail images
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.src = images[index];
+            });
+        }
+    </script>
+</body>
+</html>

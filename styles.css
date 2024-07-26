@@ -114,7 +114,10 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
 }
-
+.project-link{
+    text-decoration: none;
+    color: #000;
+}
 .contact-section form input, .contact-section form textarea {
     width: 80%;
     padding: 10px;
