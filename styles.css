@@ -4,14 +4,26 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --accent-color: #0077b5;
+    --facebook-color: #3b5998;
+    --twitter-color: #1da1f2;
+    --linkedin-color: #0077b5;
+    --instagram-color: #e4405f;
+    --github-color: #333;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    color: var(--secondary-color);
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
@@ -34,32 +46,68 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
 .hero-section {
-    background: url('Longa1.jpg') no-repeat center center/cover;
+    /* background: url('Longa1.jpg') no-repeat center center/cover; */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: var(--secondary-color);
     text-align: center;
 }
 
-.hero-section .hero-content {
-    max-width: 600px;
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+#hc1, #hc2 {
+    width: 50%;
+    height: 100%;
+    border: solid var(--secondary-color) 1px;
+    background: var(--primary-color);
+}
+
+#hc1 {
+    padding: 1rem;
+}
+
+#hc2 {
+    position: relative;
+    overflow: hidden;
+}
+
+#hc2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+#hc2 img.active {
+    opacity: 1;
 }
 
 .hero-section h1 {
     font-size: 3rem;
-    margin: 0 ;
+    margin: 0;
+    padding: 10px 0;
 }
 
 .hero-section p {
     font-size: 1.2rem;
     margin: 20px 0;
+    padding: 10px 0;
 }
 
 .about-section, .portfolio-section, .contact-section {
@@ -70,6 +118,7 @@ nav ul li a {
 .about-section h2, .portfolio-section h2, .contact-section h2 {
     margin-bottom: 1.5rem;
     font-size: 2rem;
+    padding: 10px 0;
 }
 
 .social-media {
@@ -79,16 +128,16 @@ nav ul li a {
 .social-button {
     margin: 0 10px;
     padding: 10px 20px;
-    color: #fff;
+    color: var(--secondary-color);
     text-decoration: none;
     border-radius: 5px;
 }
 
-.facebook { background: #3b5998; }
-.twitter { background: #1da1f2; }
-.linkedin { background: #0077b5; }
-.instagram { background: #e4405f; }
-.github { background: #333; }
+.social-button.facebook { background: var(--facebook-color); }
+.social-button.twitter { background: var(--twitter-color); }
+.social-button.linkedin { background: var(--linkedin-color); }
+.social-button.instagram { background: var(--instagram-color); }
+.social-button.github { background: var(--github-color); }
 
 .portfolio-grid {
     display: flex;
@@ -98,7 +147,7 @@ nav ul li a {
 
 .portfolio-item {
     border: 1px solid #ddd;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     width: 300px;
     text-align: center;
@@ -114,10 +163,12 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
 }
-.project-link{
+
+.project-link {
     text-decoration: none;
     color: #000;
 }
+
 .contact-section form input, .contact-section form textarea {
     width: 80%;
     padding: 10px;
@@ -125,8 +176,8 @@ nav ul li a {
 }
 
 .contact-section form button {
-    background: #333;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -134,8 +185,43 @@ nav ul li a {
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .portfolio-item {
+        width: 90%;
+    }
+    .contact-section form input, .contact-section form textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .portfolio-item {
+        width: 100%;
+    }
 }
