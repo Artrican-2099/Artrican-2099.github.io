@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const loadingScreen = document.getElementById('loading-screen');
+    
+    setTimeout(function () {
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.visibility = 'hidden';
+    }, 5000); // 5 seconds delay to allow the text to animate
+
     const images = document.querySelectorAll("#hc2 img");
     let currentIndex = 0;
 

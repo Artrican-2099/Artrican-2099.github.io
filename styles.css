@@ -1,3 +1,84 @@
+/* Full-screen loading screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fade-out 2s forwards 3s;
+}
+
+/* Loading text */
+#loading-text {
+    font-size: 3rem;
+    animation: tracking-out-expand 2s forwards 3s; /* 3 seconds delay to show the text */
+}
+
+/* Slide-top animation */
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+ @-webkit-keyframes tracking-out-expand {
+    0% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 0.8;
+    }
+    100% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+  }
+  @keyframes tracking-out-expand {
+    0% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 0.8;
+    }
+    100% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+  }
+  
+/* Fade-out animation */
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Your existing CSS */
 * {
     margin: 0;
     padding: 0;
@@ -90,8 +171,8 @@ nav ul li a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 1s ease-in-out;
     opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 #hc2 img.active {
@@ -101,24 +182,23 @@ nav ul li a {
 .hero-section h1 {
     font-size: 3rem;
     margin: 0;
-    padding: 10px 0;
 }
 
 .hero-section p {
     font-size: 1.2rem;
     margin: 20px 0;
-    padding: 10px 0;
 }
 
 .about-section, .portfolio-section, .contact-section {
     padding: 2rem;
     text-align: center;
+    background: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .about-section h2, .portfolio-section h2, .contact-section h2 {
     margin-bottom: 1.5rem;
     font-size: 2rem;
-    padding: 10px 0;
 }
 
 .social-media {
@@ -166,7 +246,7 @@ nav ul li a {
 
 .project-link {
     text-decoration: none;
-    color: #000;
+    color: var(--primary-color);
 }
 
 .contact-section form input, .contact-section form textarea {
