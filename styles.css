@@ -214,11 +214,9 @@
     background: #ff3900;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
-    margin-top: 2rem;
     align-content: center;
     justify-content: center;
-    width: 100%;
-    
+    width: 100%;    
 }
 
 
@@ -260,7 +258,7 @@ nav ul li a {
 }
 
 .hero-section {
-    background: url('Longa1.jpg') no-repeat center center/cover;
+    background: url('Longa1nobg.png') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -279,13 +277,18 @@ nav ul li a {
 #hc1, #hc2 {
     width: 50%;
     height: 100%;
-    border: solid var(--secondary-color) 1px;
+    /*border: solid var(--secondary-color) 1px;*/
     background: var(--background-main);
     visibility: hidden;
 }
 
 #hc1 {
     padding: 1rem;
+    visibility: visible;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    background: transparent;
 }
 
 #hc2 {
