@@ -43,7 +43,56 @@
     font-size: 3rem;
     animation: tracking-out-expand 2s forwards 3s; /* 3 seconds delay to show the text */
 }
+/* Animation */
+@keyframes slide-in-bottom {
+  0% {
+      transform: translateY(2000px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
 
+@keyframes slide-out-bottom {
+  0% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(2000px);
+      opacity: 0;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @keyframes slide-in-bottom {
+      0% {
+          -webkit-transform: translateY(2000px);
+          transform: translateY(2000px);
+          opacity: 0;
+      }
+      100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+
+  @keyframes slide-out-bottom {
+      0% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 1;
+      }
+      100% {
+          -webkit-transform: translateY(2000px);
+          transform: translateY(2000px);
+          opacity: 0;
+      }
+  }
+}
 /* Slide-top animation */
 @-webkit-keyframes slide-top {
   0% {
@@ -257,8 +306,36 @@ nav ul li a {
     text-decoration: none;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.menu-toggle.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.change .bar2 {
+  opacity: 0;
+}
+
+.menu-toggle.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 .hero-section {
-    background: url('Longa1nobgww.png') no-repeat center center/cover;
+    background: url('Longa1nobg2.png') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -429,6 +506,44 @@ footer {
     border-top: solid white 1px;
 }
 
+@media (max-width:900px) {
+  .menu-toggle {
+    display: block;
+}
+
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #000;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    animation: slide-out-bottom 0.5s forwards;
+    margin-right: 1rem;
+}
+
+nav ul.active {
+    display: flex;
+    animation: slide-in-bottom 0.5s forwards;
+}
+
+nav ul.inactive {
+    display: flex;
+    animation: slide-out-bottom 0.5s forwards;
+}
+
+nav ul li {
+    margin: 10px 0;
+    text-align: right;
+}
+
+nav ul li a {
+    padding: 10px;
+    display: block;
+}
+
+}
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: row;
