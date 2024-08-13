@@ -1,0 +1,59 @@
+header {
+    background: var(--background-main);
+    color: var(--secondary-color);
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.menu-toggle.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.change .bar2 {
+  opacity: 0;
+}
+
+.menu-toggle.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
