@@ -46,18 +46,21 @@
 /* Animation */
 @keyframes slide-in-bottom {
   0% {
-      transform: translateY(2000px);
-      opacity: 0;
+    transform: translateY(2000px);
+    opacity: 0;
   }
   100% {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(calc(-100vh + 80px)); /* Adjust based on nav bar height */
+    opacity: 1;
   }
 }
 
+.slide-up-animation {
+  animation: slide-in-bottom 1s forwards; /* 1s is the duration of the animation */
+}
 @keyframes slide-out-bottom {
   0% {
-      transform: translateY(0);
+      transform: translateY(calc(-100vh + 80px));
       opacity: 1;
   }
   100% {
@@ -65,7 +68,7 @@
       opacity: 0;
   }
 }
-
+/*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @keyframes slide-in-bottom {
       0% {
@@ -93,6 +96,7 @@
       }
   }
 }
+*/
 /* Slide-top animation */
 @-webkit-keyframes slide-top {
   0% {
