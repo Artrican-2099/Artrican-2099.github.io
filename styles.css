@@ -277,18 +277,23 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background: url('unsplashbg') no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     color: var(--secondary-color);
-    background: var(--background-main);
-    background: url("unsplashbg");
 }
 
-
+.contact-div{
+  flex:1;
+}
 
 .about-section, .portfolio-section, .contact-section {
     padding: 2rem;
     text-align: center;
-    background: url('unsplashbg') no-repeat center center/cover;
+    /*background: url('unsplashbg') no-repeat center center/cover;*/
     color: var(--primary-color);
 }
 

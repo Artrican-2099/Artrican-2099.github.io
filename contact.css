@@ -18,7 +18,12 @@
 .social-button.instagram { background: var(--instagram-color); }
 .social-button.github { background: var(--github-color); }
 
-
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    height:87vh;
+    align-content: center;
+}
 
 .contact-section form {
     display: flex;
@@ -57,5 +62,5 @@ footer {
     color: var(--secondary-color);
     text-align: center;
     padding: 1rem 0;
-    border-top: solid white 1px;
+    /*border-top: solid white 1px;*/
 }
