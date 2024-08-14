@@ -39,6 +39,7 @@
     flex-direction: column;
     text-align: center;
     width: 70%;
+    padding: 1rem;
 }
 
 .Harlem-shake:hover{
