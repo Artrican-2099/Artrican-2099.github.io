@@ -4,7 +4,13 @@
     justify-content: center;
     overflow: hidden;
 }
-
+.Harlem-shake{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width: 80%;
+    align-content: center;
+}
 .portfolio-item {
     z-index:0;
     display: flex;
@@ -13,21 +19,29 @@
     margin: 20px;
     padding: 10px;
     text-align: center;
-    width: 40%
+    width: 100%;
+    align-content: center;
 }
 
 .portfolio-item img {
     width: 100%;
     height: auto;
+    border: 1px solid white;
 }
 
 .portfolio-image {
-    width: 100%;
+    width: 30%;
     height: auto;
 }
 
+.portfolio-description{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+}
 
-.#project-link:hover{
+.Harlem-shake:hover{
   -webkit-animation: vibrate-1 0.2s linear 10 both;
 	        animation: vibrate-1 0.2s linear 10 both;
 }

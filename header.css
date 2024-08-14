@@ -1,11 +1,11 @@
 header {
     background: var(--background-main);
     color: var(--secondary-color);
-    padding: 1em 0;
+    padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position:fixed;
+    position:sticky;
     width: 100%;
     z-index: 1;
 }
@@ -15,6 +15,12 @@ header .logo {
     font-weight: bold;
     margin-left: 20px;
 }
+
+nav {
+  position: relative;
+  padding-right: 1rem;
+}
+
 
 nav ul {
     list-style: none;
