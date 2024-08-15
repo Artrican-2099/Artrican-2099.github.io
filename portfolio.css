@@ -62,5 +62,13 @@
     }
 }
 
+.portfolio-item p{
+    text-justify: distribute;
+    justify-content: center;
+    text-align: justify;
+}
 
+.portfolio-item h3{
+    margin-bottom: 1rem;
+}
 

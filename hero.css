@@ -35,6 +35,22 @@
     background: transparent;
 }
 
+.cv-div{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    justify-content: center;
+}
+
+.cv-button{
+    background-color: var(--alternate);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: black;
+    font-weight: 800;
+    font-size: large;
+}
+
 #hc2 {
     position: relative;
     overflow: hidden;
