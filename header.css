@@ -1,13 +1,13 @@
 header {
     background: var(--background-main);
     color: var(--secondary-color);
-    padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position:sticky;
     width: 100%;
     z-index: 1;
+    border-bottom: 1px solid white;
   }
 
 header .logo {
@@ -19,21 +19,43 @@ header .logo {
 nav {
   position: relative;
   padding-right: 1rem;
+
+  height: 100%;
 }
 
 #nav-menu{
-  padding: 1rem;
+  height: 100%;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-around;
 }
 
 nav ul li {
-    margin-right: 20px;
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 0.6rem;
+  padding-left: 0.6rem;
+  height: 100%;
+  align-items: center;
 }
-
+nav ul li:hover{
+  cursor: pointer;
+    -webkit-animation: color-change-2x 1s linear both;
+	        animation: color-change-2x 1s linear both;
+    a{
+      -webkit-animation: color-change-text 1s linear both;
+	        animation: color-change-text 1s linear both;
+    }
+}
+.active-page{
+  text-decoration: underline var(--alternate);
+}
 nav ul li a {
     color: var(--secondary-color);
     text-decoration: none;

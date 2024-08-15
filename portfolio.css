@@ -21,6 +21,8 @@
     text-align: center;
     width: 100%;
     align-content: center;
+    justify-content: center;
+
 }
 
 .portfolio-item img {
@@ -35,6 +37,10 @@
 
 
 .portfolio-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 30%;
     height: auto;
 }

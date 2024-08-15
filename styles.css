@@ -271,8 +271,9 @@
     align-content: center;
     justify-content: center;
     width: 100%;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
   }
-
 
 
 body {
@@ -284,6 +285,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     color: var(--secondary-color);
+    border: 1px solid white;
 }
 
 .main{
