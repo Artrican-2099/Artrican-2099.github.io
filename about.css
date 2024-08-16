@@ -61,4 +61,8 @@
     #ac1 img, #ac2 img{
         display: none;
     }
+
+    #ac2 p{
+        padding: 1rem;
+    }
 }
