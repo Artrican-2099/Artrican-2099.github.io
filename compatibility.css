@@ -11,19 +11,31 @@
         display: none;
     }
 
+    .Harlem-shake{
+        width: 100%;
+    }
     .portfolio-item{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin:0;
+        margin-bottom:1rem;
     }
 
     .portfolio-image,.portfolio-description{
-        height: 50%;
         width: 100%;
     }
+
+    .abouts-content{
+        display: flex;
+        flex-direction:row;
+        width:auto;
+        height: auto;
+    }
 }
+
 @media (max-width: 900px) {
     nav {
         display: none;
@@ -63,19 +75,11 @@
         transition: transform 1s ease-in-out;
         transform: translateX(0);
     }
+
+   
   }
 /*
 @media (max-width: 768px) {
-    .hero-content {
-        flex-direction: row;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
     .portfolio-grid {
         flex-direction: column;
         align-items: center;
@@ -99,4 +103,4 @@
         width: 100%;
     }
 }
-*/
+    */

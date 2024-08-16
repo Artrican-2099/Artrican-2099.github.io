@@ -130,44 +130,4 @@ nav ul li:hover a {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile menu styles */
-@media (max-width: 900px) {
-  nav {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: var(--background-main);
-      z-index: 2;
-      flex-direction: column;
-      justify-content: flex-start;
-      padding-top: calc(3.5rem + 20px);
-      transition: transform 1s ease-in-out;
-      transform: translateX(-100%);
-  }
 
-  #nav-menu {
-      flex-direction: column;
-  }
-
-  nav ul li {
-      justify-content: flex-start;
-  }
-
-  nav ul li a {
-      padding: 1rem 2rem;
-      font-size: 1.5rem;
-  }
-
-  .hamburger {
-      display: flex;
-  }
-
-  nav.open {
-      display: flex;
-      transition: transform 1s ease-in-out;
-      transform: translateX(0);
-  }
-}
