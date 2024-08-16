@@ -1,4 +1,28 @@
 /* Mobile menu styles */
+@media (max-width: 1300px){
+    .hero-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #hc1, #hc2{
+        width: 100%;
+    }
+    #hc2{
+        display: none;
+    }
+
+    .portfolio-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portfolio-image,.portfolio-description{
+        height: 50%;
+        width: 100%;
+    }
+}
 @media (max-width: 900px) {
     nav {
         display: none;
@@ -39,6 +63,7 @@
         transform: translateX(0);
     }
   }
+/*
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: row;
@@ -73,3 +98,4 @@
         width: 100%;
     }
 }
+*/
