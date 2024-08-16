@@ -51,7 +51,11 @@
     color: black;
     font-weight: 800;
     font-size: large;
+    width: 100%;
+}
 
+.cv-button:hover{
+    cursor: pointer;
 }
 
 .hero-section h1 {
