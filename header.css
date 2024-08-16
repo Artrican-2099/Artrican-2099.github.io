@@ -1,63 +1,173 @@
-header {
-    background: var(--background-main);
-    color: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position:sticky;
-    width: 100%;
-    z-index: 1;
-    border-bottom: 1px solid white;
+/* Base styles */
+:root {
+  --background-main: #000;
+  --secondary-color: #fff;
+  --alternate: #f00;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#loading-text {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  animation: fade-in-out 5s infinite;
+}
+
+@keyframes fade-in-out {
+  0%, 100% {
+      opacity: 0;
   }
+  50% {
+      opacity: 1;
+  }
+}
+
+header {
+  background: var(--background-main);
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid white;
+  padding: 0 20px;
+}
 
 header .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-left: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 nav {
-  position: relative;
-  padding-right: 1rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
 }
 
-#nav-menu{
-  height: 100%;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    justify-content: space-around;
+#nav-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
   display: flex;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-right: 0.6rem;
-  padding-left: 0.6rem;
-  height: 100%;
   align-items: center;
 }
-nav ul li:hover{
-  cursor: pointer;
-    -webkit-animation: color-change-2x 1s linear both;
-	        animation: color-change-2x 1s linear both;
-    a{
-      -webkit-animation: color-change-text 1s linear both;
-	        animation: color-change-text 1s linear both;
-    }
+
+nav ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 1rem;
 }
-.active-page{
+
+nav ul li:hover a {
+  text-decoration: underline;
+}
+
+.active-page a {
   text-decoration: underline var(--alternate);
 }
-nav ul li a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-size: 1.2rem;
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 1rem;
+  margin-right: 20px;
+  z-index: 100000;
+  overflow:hidden;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile menu styles */
+@media (max-width: 900px) {
+  nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--background-main);
+      z-index: 2;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: calc(3.5rem + 20px);
+      transition: transform 1s ease-in-out;
+      transform: translateX(-100%);
+  }
+
+  #nav-menu {
+      flex-direction: column;
+  }
+
+  nav ul li {
+      justify-content: flex-start;
+  }
+
+  nav ul li a {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  nav.open {
+      display: flex;
+      transition: transform 1s ease-in-out;
+      transform: translateX(0);
+  }
 }

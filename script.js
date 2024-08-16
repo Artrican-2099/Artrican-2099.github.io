@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const loadingScreen = document.getElementById('loading-screen');
 
     setTimeout(function () {
+        loadingScreen.style.transition = 'opacity 1s ease-out';
         loadingScreen.style.opacity = '0';
-        loadingScreen.style.visibility = 'hidden';
+        setTimeout(() => {
+            loadingScreen.style.visibility = 'hidden';
+        }, 1000); // Matches the transition duration
     }, 5000); // 5 seconds delay to allow the text to animate
 
     // Video hover functionality
@@ -12,25 +15,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
     portfolioItems.forEach(item => {
         const video = item.querySelector('video');
-        const poster = video.getAttribute('poster'); // Store original poster
+        if (!video) return; // Skip if no video element found
+
+        const poster = video.getAttribute('poster') || '';
 
         item.addEventListener('mouseenter', () => {
-            if (video) {
-                video.currentTime = 0; // Reset the video to the start
-                video.play(); // Play the video
-                video.style.opacity = '1'; // Ensure the video is visible
-                video.classList.add('playing'); // Add a class when playing
-            }
+            video.currentTime = 0;
+            video.play();
+            video.style.opacity = '1';
+            video.classList.add('playing');
         });
 
         item.addEventListener('mouseleave', () => {
-            if (video) {
-                video.pause(); // Pause the video
-                video.currentTime = 0; // Reset the video to the start
-                video.style.opacity = '1'; // Hide the video
-                video.setAttribute('poster', poster); // Restore the poster
-                video.classList.remove('playing'); // Remove the class when not playing
+            video.pause();
+            video.currentTime = 0;
+            if (video.getAttribute('poster') !== poster) {
+                video.setAttribute('poster', poster);
             }
+            video.classList.remove('playing');
         });
+    });
+
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger-menu');
+    const navMenu = document.querySelector('nav');
+
+    function toggleMenu() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('open');
+    }
+
+    // Toggle the menu when hamburger button is clicked
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Close the menu when a navigation link is clicked
+    navMenu.addEventListener('click', function(event) {
+        if (event.target.tagName === 'A' || event.target === navMenu) {
+            toggleMenu();
+        }
     });
 });

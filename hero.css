@@ -1,5 +1,5 @@
 .hero-section {
-    background: url('unsplashbg') no-repeat center center/cover;
+    background: url('paintstrokes') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
 }
 
 .hero-content {
-    background: url('unsplashbg') no-repeat center center/cover;
+    background: url('paintstrokes') no-repeat center center/cover;
     display: flex;
     flex-direction: row;
     width: 100%;
