@@ -28,12 +28,6 @@
         width: 100%;
     }
 
-    .abouts-content{
-        display: flex;
-        flex-direction:row;
-        width:auto;
-        height: auto;
-    }
 }
 
 @media (max-width: 900px) {
