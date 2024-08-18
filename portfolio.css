@@ -47,19 +47,19 @@
     width: 70%;
     padding: 1rem;
 }
-
+/*
 .Harlem-shake:hover{
   -webkit-animation: vibrate-1 0.2s linear 10 both;
 	        animation: vibrate-1 0.2s linear 10 both;
 }
-
+*/
 .portfolio-item:hover{
     cursor: pointer;
-    -webkit-animation: color-change-2x 2s linear both;
-	        animation: color-change-2x 2s linear both;
+    -webkit-animation: color-change-2x 1s linear both;
+	        animation: color-change-2x 1s linear both;
     p,h3{
-      -webkit-animation: color-change-text 2s linear both;
-	        animation: color-change-text 2s linear both;
+      -webkit-animation: color-change-text 1s linear both;
+	        animation: color-change-text 1s linear both;
     }
 }
 
@@ -68,6 +68,7 @@
     justify-content: center;
     text-align: justify;
 }
+
 
 .portfolio-item h3{
     margin-bottom: 1rem;
