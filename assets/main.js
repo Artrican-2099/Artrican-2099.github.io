@@ -25,16 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ---------- Active nav link ---------- */
   const links = [...nav.querySelectorAll('a[href^="#"]')];
   const sections = links.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
-  if ("IntersectionObserver" in window) {
-    const spy = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id));
-        }
-      });
-    }, { rootMargin: "-45% 0px -50% 0px" });
-    sections.forEach((s) => spy.observe(s));
-  }
+  const spy = () => {
+    const mark = window.scrollY + window.innerHeight * 0.4;
+    let current = null;
+    sections.forEach((s) => { if (s.offsetTop <= mark) current = s.id; });
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) current = sections[sections.length - 1].id;
+    links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + current));
+  };
+  spy();
+  window.addEventListener("scroll", spy, { passive: true });
+  window.addEventListener("resize", spy);
 
   /* ---------- Reveal on scroll ---------- */
   const reveals = document.querySelectorAll(".reveal");
