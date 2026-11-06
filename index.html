@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Longa Maimbo — Mechatronics Engineer, Developer &amp; Artist</title>
-  <meta name="description" content="Portfolio of Longa Maimbo, a mechatronics engineering student at UCT who blends engineering, web development and art.">
+  <meta name="description" content="Portfolio of Longa Maimbo, an MSc Mechatronics engineer at UCT working in computer vision, AI and autonomous systems.">
   <meta name="theme-color" content="#0e0e0e">
 
   <meta property="og:title" content="Longa Maimbo — Engineer, Developer &amp; Artist">
-  <meta property="og:description" content="Mechatronics, code and art. See my projects.">
+  <meta property="og:description" content="Computer vision, AI and autonomous systems. See my projects.">
   <meta property="og:image" content="assets/img/og.jpg">
   <meta property="og:type" content="website">
 
@@ -49,17 +49,17 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="dot"></span> Mechatronics Engineering · University of Cape Town</p>
+          <p class="eyebrow"><span class="dot"></span> MSc Mechatronics · University of Cape Town</p>
           <h1>Engineer, coder &amp; <em>artist.</em></h1>
-          <p class="lead">Hey there, I'm Longa. I build things that sit where engineering, software and art meet: robots and control systems, websites, and the occasional AR t-shirt.</p>
+          <p class="lead">Hey there, I'm Longa. I specialise in computer vision and AI, and I combine them with CAD, electronics and firmware to build autonomous systems that work in the real world.</p>
           <div class="hero-actions">
             <a href="#work" class="btn">See my work</a>
             <a href="assets/Longa-Maimbo-CV.pdf" class="btn btn-ghost" download>Download CV</a>
           </div>
           <dl class="hero-facts">
             <div><dt>Based in</dt><dd>Cape Town</dd></div>
-            <div><dt>Studying</dt><dd>BSc Eng, UCT</dd></div>
-            <div><dt>Focus</dt><dd>Robotics · Web · Art</dd></div>
+            <div><dt>Studying</dt><dd>MSc Eng, UCT</dd></div>
+            <div><dt>Focus</dt><dd>Vision · AI · Robotics</dd></div>
           </dl>
         </div>
         <div class="hero-visual reveal">
@@ -72,10 +72,10 @@
     <!-- MARQUEE -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <span>Engineering</span><span>Code</span><span>Art</span><span>Robotics</span><span>Design</span>
-        <span>Engineering</span><span>Code</span><span>Art</span><span>Robotics</span><span>Design</span>
-        <span>Engineering</span><span>Code</span><span>Art</span><span>Robotics</span><span>Design</span>
-        <span>Engineering</span><span>Code</span><span>Art</span><span>Robotics</span><span>Design</span>
+        <span>Computer vision</span><span>AI</span><span>Robotics</span><span>Embedded</span><span>Art</span>
+        <span>Computer vision</span><span>AI</span><span>Robotics</span><span>Embedded</span><span>Art</span>
+        <span>Computer vision</span><span>AI</span><span>Robotics</span><span>Embedded</span><span>Art</span>
+        <span>Computer vision</span><span>AI</span><span>Robotics</span><span>Embedded</span><span>Art</span>
       </div>
     </div>
 
@@ -84,7 +84,57 @@
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow">Selected work</p>
-          <h2>Projects</h2>
+          <h2>Research &amp; projects</h2>
+        </header>
+
+        <div class="research">
+          <article class="rcard rcard-feature reveal">
+            <div class="rmeta"><span>Master's project</span><span>UCT · ongoing</span></div>
+            <h3>3D reconstruction for autonomous drone navigation</h3>
+            <p>An autonomous navigation and real-time 3D reconstruction system for low-cost indoor micro aerial vehicles. It combines custom visual-inertial odometry, neural depth estimation, volumetric mapping and predictive flight control.</p>
+            <ul class="tags"><li>PyTorch</li><li>ROS2</li><li>DINOv2</li><li>GTSAM</li><li>CUDA</li><li>MAVLink</li><li>ArduPilot</li></ul>
+          </article>
+
+          <article class="rcard rcard-wide reveal">
+            <div class="rmeta"><span>Research paper</span><span>2026</span></div>
+            <p class="badge">Accepted · Computing in Cardiology, Madrid</p>
+            <h3>End-to-end ECG digitisation</h3>
+            <p>A fully automated three-stage pipeline that digitises noisy paper ECG records using soft segmentation and BiLSTM signal reconstruction. I coded the classical computer vision baseline and the BiLSTM model.</p>
+            <ul class="tags"><li>PyTorch</li><li>OpenCV</li><li>GPU</li><li>Sequence models</li></ul>
+          </article>
+
+          <article class="rcard reveal">
+            <div class="rmeta"><span>Hackathon</span><span>2025</span></div>
+            <p class="badge">1st place</p>
+            <h3>Graduate hiring predictor</h3>
+            <p>A predictive analytics pipeline that forecasts how candidates progress through a multi-stage graduate hiring process. Hosted by Predictive Insights with Leaply, Alphawave Group and the UCT Developer Society.</p>
+            <ul class="tags"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Predictive modelling</li></ul>
+          </article>
+
+          <article class="rcard reveal">
+            <div class="rmeta"><span>Undergraduate thesis</span><span>UCT · 2024</span></div>
+            <h3>Piano transcription with machine learning</h3>
+            <p>An audio analysis and data extraction pipeline to train and compare deep learning models that transcribe monophonic piano music.</p>
+            <ul class="tags"><li>TensorFlow</li><li>Keras</li><li>Python</li><li>HPC</li></ul>
+          </article>
+
+          <article class="rcard reveal">
+            <div class="rmeta"><span>Remote sensing</span><span>UCT · 2025</span></div>
+            <h3>Oil spill detection from SAR satellites</h3>
+            <p>A pipeline that pulls synthetic aperture radar satellite data, with a radar band mathematics algorithm that makes oil spills easier to see.</p>
+            <ul class="tags"><li>openEO</li><li>Python</li><li>SAR imaging</li><li>Pandas</li></ul>
+          </article>
+
+          <article class="rcard reveal">
+            <div class="rmeta"><span>Outreach</span><span>InventAfrika · 2025</span></div>
+            <h3>Hardware hackathons</h3>
+            <p>Organised and ran hackathons in Cape Town, Stellenbosch and Windhoek to get more people into hardware design and 3D printing.</p>
+            <ul class="tags"><li>Arduino</li><li>STM32</li><li>IoT</li><li>Documentation</li></ul>
+          </article>
+        </div>
+
+        <header class="section-head sub-head reveal">
+          <h3>Hands-on builds</h3>
         </header>
 
         <div class="projects">
@@ -149,7 +199,7 @@
           <div class="facet reveal">
             <img src="assets/img/eng-circuit.webp" alt="Hand-soldered circuit on stripboard" width="778" height="800" loading="lazy">
             <h3>The engineer</h3>
-            <p>I enjoy solving complex problems, from control systems and PCBs to the circuits inside a machine, and turning abstract ideas into working hardware.</p>
+            <p>I enjoy solving complex problems across electronics, PCB design, CAD and control, and turning abstract ideas into working hardware.</p>
           </div>
           <div class="facet reveal">
             <img src="assets/img/art-beach.webp" alt="Pencil sketch of a beach with palm trees" width="750" height="518" loading="lazy">
@@ -159,7 +209,7 @@
           <div class="facet reveal">
             <img src="assets/img/code-screenshot.webp" alt="Code for this website in an editor" width="877" height="612" loading="lazy">
             <h3>The coder</h3>
-            <p>Code is where creativity meets technology. Each line is like a brushstroke on a digital canvas, turning ideas into experiences people can interact with.</p>
+            <p>Code is where creativity meets technology. Today that mostly means deep learning and computer vision, plus the occasional website like this one.</p>
           </div>
         </div>
       </div>
@@ -171,29 +221,52 @@
         <div class="reveal">
           <p class="eyebrow">Experience &amp; education</p>
           <h2>Path so far</h2>
+          <h3 class="tl-title">Experience</h3>
           <ol class="timeline">
             <li>
-              <span class="when">2021 – present</span>
-              <h3>BSc Eng. Mechatronics</h3>
+              <span class="when">Jul 2026 – present</span>
+              <h3>Teaching Assistant, New Venture Planning</h3>
               <p class="where">University of Cape Town</p>
+              <p>First point of contact for student queries. I automated admin processes with code so student data stays clean and easy to reuse.</p>
+            </li>
+            <li>
+              <span class="when">Feb – Jun 2026</span>
+              <h3>Mechatronics Teaching Assistant</h3>
+              <p class="where">University of Cape Town</p>
+              <p>Ran lab sessions and graded technical projects on systems modelling and control design.</p>
+            </li>
+            <li>
+              <span class="when">Jul – Oct 2025</span>
+              <h3>Contract AI Engineer</h3>
+              <p class="where">Muna Africa</p>
+              <p>Built a multi-modal pricing model that uses computer vision and NLP on product images and text to categorise and value clothing inventory.</p>
             </li>
             <li>
               <span class="when">Jun – Aug 2023</span>
-              <h3>Intern, Machines Laboratory</h3>
+              <h3>Power Electronics Lab Intern</h3>
               <p class="where">University of Cape Town</p>
-              <p>Drew schematics for soft-starter circuits and a doubly fed induction panel so they could be tested, and proposed design fixes. Worked in EPLAN.</p>
+              <p>Analysed a doubly fed induction panel, proposed design fixes, then implemented them and got the panel running.</p>
+            </li>
+          </ol>
+
+          <h3 class="tl-title">Education</h3>
+          <ol class="timeline">
+            <li>
+              <span class="when">2025 – present</span>
+              <h3>MSc Eng Mechatronics</h3>
+              <p class="where">University of Cape Town</p>
+              <p>Specialising in computer vision and artificial intelligence.</p>
             </li>
             <li>
-              <span class="when">Dec 2021</span>
-              <h3>Certificate of Training</h3>
-              <p class="where">Cape Peninsula University of Technology</p>
-              <p>Welding, turning, CNC programming, pneumatics and robotics.</p>
+              <span class="when">2021 – 2024</span>
+              <h3>BSc Eng (Hons) Mechatronics</h3>
+              <p class="where">University of Cape Town</p>
+              <p>Graduated with honours.</p>
             </li>
             <li>
-              <span class="when">Dec 2020</span>
-              <h3>Intern</h3>
-              <p class="where">Ottobock, Lusaka, Zambia</p>
-              <p>Cast limbs, moulded test sockets, assembled and fitted prosthetics, and supported patients in physical therapy.</p>
+              <span class="when">2019 – 2020</span>
+              <h3>A-Levels</h3>
+              <p class="where">Springfields School of Education</p>
             </li>
           </ol>
         </div>
@@ -201,16 +274,16 @@
         <div class="skills reveal">
           <h3>Toolkit</h3>
           <div class="skill-group">
-            <p>Code</p>
-            <ul class="chips"><li>Python</li><li>Java</li><li>C (microcontrollers)</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <p>Programming &amp; frameworks</p>
+            <ul class="chips"><li>Python</li><li>C/C++</li><li>MATLAB</li><li>Simulink</li><li>PyTorch</li><li>ROS2</li><li>Linux</li><li>Open3D</li><li>Gazebo</li><li>GTSAM</li><li>PX4</li></ul>
           </div>
           <div class="skill-group">
-            <p>Engineering</p>
-            <ul class="chips"><li>MATLAB</li><li>SolidWorks</li><li>KiCad PCB</li><li>EPLAN</li><li>Soldering</li></ul>
+            <p>Engineering &amp; design</p>
+            <ul class="chips"><li>Embedded design (KiCad)</li><li>SolidWorks</li></ul>
           </div>
           <div class="skill-group">
-            <p>Other</p>
-            <ul class="chips"><li>Technical writing</li><li>Problem solving</li><li>Communication</li><li>Drawing &amp; painting</li></ul>
+            <p>Professional</p>
+            <ul class="chips"><li>Technical communication</li><li>Team leadership</li><li>Microsoft Office</li></ul>
           </div>
           <a href="assets/Longa-Maimbo-CV.pdf" class="btn btn-ghost btn-block" target="_blank" rel="noopener">View full CV ↗</a>
         </div>
@@ -223,7 +296,7 @@
         <div class="reveal">
           <p class="eyebrow">Contact</p>
           <h2>Let's build something.</h2>
-          <p class="lead">I'm open to internships, collaborations and creative projects. Feel free to reach out.</p>
+          <p class="lead">I'm looking for roles in mechatronics, embedded systems, industrial automation and AI engineering. Feel free to reach out.</p>
           <a class="contact-email" href="mailto:lnbmaimbo@gmail.com">lnbmaimbo@gmail.com</a>
           <ul class="socials">
             <li><a href="https://za.linkedin.com/in/longa-maimbo-2b2183313" target="_blank" rel="noopener">
